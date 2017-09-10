@@ -22,18 +22,18 @@ damage.
 
 ## Notes about the environment used
 This study was done using the following tools, including OS and Programming language versions
-
+ 
 The study was conducted on a 64-bit Windows 7 machine with 4 cores.
 
 R language was R version 3.1.1 (2014-07-10)
 
-For publishing to `rpubs.com`, I used RStudio version 0.98.1103
+For publishing to `rpubs.com`, I used RStudio version 0.98.1103 
 
 The full project may be found on Github at `https://github.com/gregoryg/05-reproducible-research-assignment-2`
 
 ## Data Processing
 ### Set libraries used in this analysis
-
+ 
 ```r
 library(stringr)
 library(lubridate)
@@ -214,7 +214,7 @@ Some functions not used in the published analysis that may be useful
 ## timeconv() is used to take inconsistent times and convert them to a standard format
 ## times will either be 24-hour HHMM ("1330") or 12-hour strings with AM/PM ("01:30:00 PM")
 ## functions returns format of 24-hour HH:MM:SS ("13:30:00")
-timeconv <- function(x) {
+timeconv <- function(x) { 
     if (nchar(x) == 4) {
         paste(substr(x,1,2), substr(x,3,4), "00", sep=":")
     } else {
