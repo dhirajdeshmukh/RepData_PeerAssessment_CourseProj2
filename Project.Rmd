@@ -3,7 +3,7 @@ title: "Assessing Health and Economic Impact of Weather Events"
 output: 
   html_document:
     keep_md: true
----
+--- 
 ## Synopsis of Study Results
 
 This study U.S. National Oceanic and Atmospheric Administration's
@@ -79,7 +79,7 @@ multiplied by an exponent given in another field (`PROPDMGEXP` and
 `CROPDMGEXP` respectively.  Unfortunately, not all of the exponent
 values are valid; many appear to be rounding or entry errors from
 older entry systems.
-
+ 
 For the purposes of this study, we accept only the following values
 for exponent:
   * H hundred (x100)
@@ -112,7 +112,7 @@ going to attempt to categorize the most impactful events by looking
 for common words and abbreviations in a relative handful of weather
 categories.
 
-```{r addWeatherCategory} 
+```{r addWeatherCategory}  
 if (!RDSloaded) {
     generateEvent <- function(evt) {
         evt <- tolower(evt)
@@ -134,7 +134,7 @@ if (!RDSloaded) {
 ```
 
 
-For purposes of this study, USA is defined as the 50 states in the
+For purposes of this study, USA is defined as the 50 states in the 
 continental US, plus District of Columbia, Hawaii and
 Alaska. territories, protectorates, and military regions are excluded
 
@@ -217,6 +217,6 @@ timeconv <- function(x) {
             formatC(as.integer(substr(x,1,2)) + timeadd, width=2, format="d", flag="0"),
             substr(x,3,nchar(x)-3))
     }
-}
+} 
 
 ```
